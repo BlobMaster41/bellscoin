@@ -46,6 +46,7 @@
 #include <QLineEdit>
 #include <QPushButton>
 #include <QLocale>
+#include <QFont>
 #include <QMessageBox>
 #include <QProgressBar>
 #include <QStackedWidget>
@@ -79,7 +80,14 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     setUnifiedTitleAndToolBarOnMac(true);
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
 #endif
-    // Accept D&D of URIs
+
+	//specify a new font.
+	QFont newFont("Comic Sans MS", 10);
+
+	//set font of application
+	QApplication::setFont(newFont);
+
+	// Accept D&D of URIs
     setAcceptDrops(true);
 
     // Create actions for the toolbar, menu bar and tray/dock icon
@@ -628,7 +636,7 @@ void BitcoinGUI::setMining(bool mining, int hashrate)
     else
     {
         labelMiningIcon->setPixmap(QIcon(":/icons/mining_inactive").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-        labelMiningIcon->setToolTip(tr("Not mining Bellss"));
+        labelMiningIcon->setToolTip(tr("Not mining Bells"));
     }
 }
 

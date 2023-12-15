@@ -58,7 +58,7 @@ static bool vfReachable[NET_MAX] = {};
 static bool vfLimited[NET_MAX] = {};
 static CNode* pnodeLocalHost = NULL;
 uint64 nLocalHostNonce = 0;
-array<int, THREAD_MAX> vnThreadsRunning;
+boost::array<int, THREAD_MAX> vnThreadsRunning; //array<int, THREAD_MAX> vnThreadsRunning;
 static std::vector<SOCKET> vhListenSocket;
 CAddrMan addrman;
 
@@ -1150,7 +1150,7 @@ void MapPort()
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strDNSSeed[][2] = {
-    // {"bellspool.org", "dnsseed.bellspool.org"},
+     {"seeder.belscan.io", "seeder.belscan.io"},
     // {"bytesized-vps.com", "dnsseed.bytesized-vps.com"},
     // {"xurious.com", "dnsseed.ltc.xurious.com"},
 };
@@ -1431,7 +1431,7 @@ void ThreadOpenAddedConnections(void* parg)
     IMPLEMENT_RANDOMIZE_STACK(ThreadOpenAddedConnections(parg));
 
     // Make this thread recognisable as the connection opening thread
-    RenameThread("bitcoin-opencon");
+    RenameThread("bells-opencon");
 
     try
     {
@@ -1809,7 +1809,7 @@ void static Discover()
 void StartNode(void* parg)
 {
     // Make this thread recognisable as the startup thread
-    RenameThread("bitcoin-start");
+    RenameThread("bells-start");
 
     if (semOutbound == NULL) {
         // initialize semaphore

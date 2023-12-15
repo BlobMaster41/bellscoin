@@ -33,8 +33,8 @@ unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
 
-uint256 hashGenesisBlock("0xe5be24df57c43a82d15c2f06bda961296948f8f8eb48501bed1efb929afe0698");
-static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // Bells: starting difficulty is 1 / 2^12
+uint256 hashGenesisBlock = hashGenesisBlockOfficial;
+static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // DogeCoin: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 CBigNum bnBestChainWork = 0;
@@ -883,11 +883,11 @@ int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
             } else if (rand >= 840) {
                 nSubsidy = 25 * COIN;
             } else if (rand >= 500) {
-                nSubsidy = 10 * COIN; 
+                nSubsidy = 10 * COIN;
             } else if (rand <= 499) {
                 nSubsidy = 5 * COIN;
             }
-        } 
+        }
     }
     return nSubsidy + nFees;
 }
@@ -2053,7 +2053,7 @@ bool LoadBlockIndex(bool fAllowNew)
         pchMessageStart[1] = 0xc1;
         pchMessageStart[2] = 0xb7;
         pchMessageStart[3] = 0xdc;
-        hashGenesisBlock = uint256("0x5d2fc8d1cb81c089c8dc7a71d755eb2589a7973471598dc513a599e3f0662eaf");
+        hashGenesisBlock = uint256("0x");
     }
 
     //
@@ -3540,7 +3540,7 @@ CBlock* CreateNewBlock(CReserveKey& reservekey)
                 continue;
 
             // Transaction fee required depends on block size
-            // Bellsd: Reduce the exempted free transactions to 500 bytes (from Bitcoin's 3000 bytes)
+            // Bellsd: Reduce the exempted free transactions to 1500 bytes (from Bitcoin's 3000 bytes)
             bool fAllowFree = (nBlockSize + nTxSize < 1500 || CTransaction::AllowFree(dPriority));
             int64 nMinFee = tx.GetMinFee(nBlockSize, fAllowFree, GMF_BLOCK);
 
