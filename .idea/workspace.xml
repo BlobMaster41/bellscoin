@@ -57,12 +57,12 @@
       <change beforePath="$PROJECT_DIR$/src/addrman.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/addrman.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/allocators.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/allocators.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bignum.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/bignum.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bitcoinrpc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/bitcoinrpc.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bitcoinrpc.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/bitcoinrpc.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/checkpoints.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoints.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compat.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/compat.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/crypter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/crypter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/crypter.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/crypter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/db.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/db.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/db.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/e_os2.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/e_os2.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/init.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/init.h" afterDir="false" />
@@ -84,39 +84,19 @@
       <change beforePath="$PROJECT_DIR$/src/key.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/key.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/keystore.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/keystore.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/keystore.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/keystore.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mruset.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/mruset.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/net.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/net.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/netbase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/netbase.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/netbase.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/netbase.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/noui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/noui.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj-test/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj-test/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/addrman.P" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/addrman.P" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/addrman.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/addrman.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/bitcoinrpc.P" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/bitcoinrpc.P" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/checkpoints.P" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/checkpoints.P" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/checkpoints.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/checkpoints.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/checkpoints.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/crypter.P" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/crypter.P" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/crypter.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/crypter.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/db.P" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/db.P" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/db.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/db.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/dummy" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/dummy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/init.P" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/init.P" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/init.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/init.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/irc.P" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/irc.P" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/irc.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/irc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/key.P" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/key.P" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/key.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/key.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/keystore.P" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/keystore.P" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/keystore.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/keystore.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/main.P" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/main.P" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/main.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/net.P" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/net.P" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/netbase.P" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/netbase.P" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/netbase.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/netbase.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/net.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/net.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/noui.P" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/noui.P" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/protocol.P" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/protocol.P" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/protocol.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/protocol.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/rpcdump.P" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/rpcdump.P" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/rpcnet.P" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/rpcnet.P" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/rpcrawtransaction.P" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/rpcrawtransaction.P" afterDir="false" />
@@ -306,7 +286,7 @@
       <workItem from="1702599771858" duration="291000" />
       <workItem from="1702600764468" duration="5694000" />
       <workItem from="1702606927458" duration="1759000" />
-      <workItem from="1702612802585" duration="971000" />
+      <workItem from="1702612802585" duration="3326000" />
     </task>
     <servers />
   </component>

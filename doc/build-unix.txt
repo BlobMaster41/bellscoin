@@ -24,15 +24,30 @@ the graphical user interface.
 
 Build Instructions Ubuntu (13.04 Raring)
 ----------------------------------------
+```bash
+wget https://boostorg.jfrog.io/artifactory/main/release/1.70.0/source/boost_1_70_0.tar.gz
+tar -zxvf boost_1_70_0.tar.gz
+cd boost_1_70_0/
+./bootstrap.sh
+./b2
+```
+
 install old deps
+
+```bash
 sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:ubuntuhandbook1/ppa
 sudo apt-get update
 
 sudo apt-get install qt4-dev-tools libqt4-dev libqtcore4 libqtgui4
+sudo apt-get install libqt4-dev libminiupnpc-dev
 
-openssl bullcrap:
+sudo apt-get -y install libboost1.55-all-dev_1.55.0-1_amd64.deb
+```
 
+openssl:
+
+```bash
 sudo nano /etc/apt/sources.list
 add deb http://security.ubuntu.com/ubuntu bionic-security main
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
@@ -48,6 +63,7 @@ sudo apt-get install libssl1.0-dev
 
     cd src/
     make -f makefile.unix USE_UPNP=1 USE_IPV6=1 USE_QRCODE=1
+```
 
 Unless you're debugging, strip debug symbols
 
