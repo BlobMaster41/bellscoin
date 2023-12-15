@@ -1,4 +1,2 @@
-obj/version.o: version.cpp version.h \
- /home/billym2k/Downloads/Bells/src/obj/build.h
-version.cpp version.h :
- /home/billym2k/Downloads/Bells/src/obj/build.h :
+obj/version.o: version.cpp version.h /home/dev/bellscoin/src/obj/build.h
+version.cpp version.h /home/dev/bellscoin/src/obj/build.h :

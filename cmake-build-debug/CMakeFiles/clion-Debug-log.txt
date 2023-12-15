@@ -1,30 +1,31 @@
-"C:\Program Files\JetBrains\CLion 2023.3.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.3.1/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\felix\Desktop\bellcoinproject\bellscoin -B C:\Users\felix\Desktop\bellcoinproject\bellscoin\cmake-build-debug
--- The C compiler identification is GNU 13.1.0
--- The CXX compiler identification is GNU 13.1.0
+"C:\Program Files\JetBrains\CLion 2023.3.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.3.1/bin/ninja/win/x64/ninja.exe" -G Ninja -S \\wsl.localhost\Ubuntu\home\dev\bellscoin -B \\wsl.localhost\Ubuntu\home\dev\bellscoin\cmake-build-debug
+-- The C compiler identification is unknown
+-- The CXX compiler identification is unknown
 -- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: C:/Program Files/JetBrains/CLion 2023.3.1/bin/mingw/bin/gcc.exe - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: C:/Program Files/JetBrains/CLion 2023.3.1/bin/mingw/bin/g++.exe - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Configuring done (1.7s)
--- Generating done (0.0s)
--- Build files have been written to: C:/Users/felix/Desktop/bellcoinproject/bellscoin/cmake-build-debug
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: C:/Program Files/JetBrains/CLion 2023.3.1/bin/mingw/bin/gcc.exe
+-- Check for working C compiler: C:/Program Files/JetBrains/CLion 2023.3.1/bin/mingw/bin/gcc.exe - broken
+CMake Error at C:/Program Files/JetBrains/CLion 2023.3.1/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:67 (message):
+  The C compiler
 
-Cannot get compiler information:
-	Compiler exited with error code 1: C:\Program Files\JetBrains\CLion 2023.3.1\bin\mingw\bin\g++.exe -xobjective-c++ -g -std=gnu++14 -fpch-preprocess -v -dD -E
-	Using built-in specs.
-	COLLECT_GCC=C:\Program Files\JetBrains\CLion 2023.3.1\bin\mingw\bin\g++.exe
-	Target: x86_64-w64-mingw32
-	Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
-	Thread model: posix
-	Supported LTO compression algorithms: zlib
-	gcc version 13.1.0 (GCC) 
-	g++.exe: error: language objective-c++ not recognized
-	g++.exe: error: language objective-c++ not recognized
-	
-	
+    "C:/Program Files/JetBrains/CLion 2023.3.1/bin/mingw/bin/gcc.exe"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: '//wsl.localhost/Ubuntu/home/dev/bellscoin/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-znndnn'
+    
+    Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.1/bin/ninja/win/x64/ninja.exe" -v cmTC_ca540
+    ninja: error: '//wsl.localhost/Ubuntu/home/dev/bellscoin/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-znndnn/testCCompiler.c', needed by 'CMakeFiles/cmTC_ca540.dir/testCCompiler.c.obj', missing and no known rule to make it
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!

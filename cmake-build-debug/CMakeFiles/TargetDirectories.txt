@@ -1,3 +1,0 @@
-C:/Users/felix/Desktop/bellcoinproject/bellscoin/cmake-build-debug/CMakeFiles/bellscoin.dir
-C:/Users/felix/Desktop/bellcoinproject/bellscoin/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/felix/Desktop/bellcoinproject/bellscoin/cmake-build-debug/CMakeFiles/rebuild_cache.dir
