@@ -24,6 +24,20 @@ the graphical user interface.
 
 Build Instructions Ubuntu (13.04 Raring)
 ----------------------------------------
+install old deps
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:ubuntuhandbook1/ppa
+sudo apt-get update
+
+sudo apt-get install qt4-dev-tools libqt4-dev libqtcore4 libqtgui4
+
+openssl bullcrap:
+
+sudo nano /etc/apt/sources.list
+add deb http://security.ubuntu.com/ubuntu bionic-security main
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
+sudo apt update && apt-cache policy libssl1.0-dev
+sudo apt-get install libssl1.0-dev
 
     sudo apt-get install build-essential \
                          libssl-dev \
