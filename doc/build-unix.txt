@@ -25,11 +25,11 @@ the graphical user interface.
 Build Instructions Ubuntu (13.04 Raring)
 ----------------------------------------
 ```bash
-wget https://boostorg.jfrog.io/artifactory/main/release/1.70.0/source/boost_1_70_0.tar.gz
-tar -zxvf boost_1_70_0.tar.gz
-cd boost_1_70_0/
+wget http://sourceforge.net/projects/boost/files/boost/1.49.0/boost_1_49_0.tar.gz
+tar -zxvf boost_1_49_0.tar.gz
+cd boost_1_49_0/
 ./bootstrap.sh
-./b2
+./b2 install
 ```
 
 install old deps
@@ -62,7 +62,7 @@ sudo apt-get install libssl1.0-dev
                          libminiupnpc-dev
 
     cd src/
-    make -f makefile.unix USE_UPNP=1 USE_IPV6=1 USE_QRCODE=1
+    make -f makefile.unix USE_UPNP=- USE_IPV6=1 USE_QRCODE=1
 ```
 
 Unless you're debugging, strip debug symbols

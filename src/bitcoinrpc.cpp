@@ -438,15 +438,15 @@ Value getmininginfo(const Array& params, bool fHelp)
 
     Object obj;
     obj.push_back(Pair("blocks",        (int)nBestHeight));
-    obj.push_back(Pair("currentblocksize",(uint64_t)nLastBlockSize));
-    obj.push_back(Pair("currentblocktx",(uint64_t)nLastBlockTx));
+    obj.push_back(Pair("currentblocksize",(boost::uint64_t)nLastBlockSize));
+    obj.push_back(Pair("currentblocktx",(boost::uint64_t)nLastBlockTx));
     obj.push_back(Pair("difficulty",    (double)GetDifficulty()));
     obj.push_back(Pair("errors",        GetWarnings("statusbar")));
     obj.push_back(Pair("generate",      GetBoolArg("-gen")));
     obj.push_back(Pair("genproclimit",  (int)GetArg("-genproclimit", -1)));
     obj.push_back(Pair("hashespersec",  gethashespersec(params, false)));
     obj.push_back(Pair("networkhashps", getnetworkhashps(params, false)));
-    obj.push_back(Pair("pooledtx",      (uint64_t)mempool.size()));
+    obj.push_back(Pair("pooledtx",      (boost::uint64_t)mempool.size()));
     obj.push_back(Pair("testnet",       fTestNet));
     return obj;
 }
@@ -2165,7 +2165,7 @@ Value getblocktemplate(const Array& params, bool fHelp)
         pblock->nNonce = 0;
 
         Array transactions;
-        map<uint256, int64_t> setTxIndex;
+        map<uint256, boost::int64_t> setTxIndex;
         int i = 0;
         CTxDB txdb("r");
         BOOST_FOREACH (CTransaction& tx, pblock->vtx)
@@ -2189,7 +2189,7 @@ Value getblocktemplate(const Array& params, bool fHelp)
             bool fInvalid = false;
             if (tx.FetchInputs(txdb, mapUnused, false, false, mapInputs, fInvalid))
             {
-                entry.push_back(Pair("fee", (int64_t)(tx.GetValueIn(mapInputs) - tx.GetValueOut())));
+                entry.push_back(Pair("fee", (boost::int64_t)(tx.GetValueIn(mapInputs) - tx.GetValueOut())));
 
                 Array deps;
                 BOOST_FOREACH (MapPrevTx::value_type& inp, mapInputs)
@@ -2199,7 +2199,7 @@ Value getblocktemplate(const Array& params, bool fHelp)
                 }
                 entry.push_back(Pair("depends", deps));
 
-                int64_t nSigOps = tx.GetLegacySigOpCount();
+                boost::int64_t nSigOps = tx.GetLegacySigOpCount();
                 nSigOps += tx.GetP2SHSigOpCount(mapInputs);
                 entry.push_back(Pair("sigops", nSigOps));
             }
@@ -2225,16 +2225,16 @@ Value getblocktemplate(const Array& params, bool fHelp)
         result.push_back(Pair("previousblockhash", pblock->hashPrevBlock.GetHex()));
         result.push_back(Pair("transactions", transactions));
         result.push_back(Pair("coinbaseaux", aux));
-        result.push_back(Pair("coinbasevalue", (int64_t)pblock->vtx[0].vout[0].nValue));
+        result.push_back(Pair("coinbasevalue", (boost::int64_t)pblock->vtx[0].vout[0].nValue));
         result.push_back(Pair("target", hashTarget.GetHex()));
-        result.push_back(Pair("mintime", (int64_t)pindexPrev->GetMedianTimePast()+1));
+        result.push_back(Pair("mintime", (boost::int64_t)pindexPrev->GetMedianTimePast()+1));
         result.push_back(Pair("mutable", aMutable));
         result.push_back(Pair("noncerange", "00000000ffffffff"));
-        result.push_back(Pair("sigoplimit", (int64_t)MAX_BLOCK_SIGOPS));
-        result.push_back(Pair("sizelimit", (int64_t)MAX_BLOCK_SIZE));
-        result.push_back(Pair("curtime", (int64_t)pblock->nTime));
+        result.push_back(Pair("sigoplimit", (boost::int64_t)MAX_BLOCK_SIGOPS));
+        result.push_back(Pair("sizelimit", (boost::int64_t)MAX_BLOCK_SIZE));
+        result.push_back(Pair("curtime", (boost::int64_t)pblock->nTime));
         result.push_back(Pair("bits", HexBits(pblock->nBits)));
-        result.push_back(Pair("height", (int64_t)(pindexPrev->nHeight+1)));
+        result.push_back(Pair("height", (boost::int64_t)(pindexPrev->nHeight+1)));
 
         return result;
     }
